@@ -2,12 +2,13 @@ import './App.css';
 import { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import ProjectOverview from './ProjectOverview';
+import {Config} from "./Config";
 
 class App extends Component {
 
 	constructor(props) {
 		super(props);
-		this.eventSource = new EventSource(`http://localhost:8080/api/jobs`);
+		this.eventSource = new EventSource(`${Config.vimon_service_url}/api/jobs`);
 	}
 
 	state = {
