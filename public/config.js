@@ -1,1 +1,3 @@
-window.VIMON_SERVICE_URL = 'http://localhost:8080'
+window._env_ = {
+    VIMON_SERVICE_URL: "http://localhost:8090",
+}

@@ -8,7 +8,9 @@ class App extends Component {
 
 	constructor(props) {
 		super(props);
-		this.eventSource = new EventSource(`${Config.vimon_service_url}/api/jobs`);
+		let url = `${Config.vimon_service_url}/api/jobs`;
+		console.log('### use eventSource url: ', url);
+		this.eventSource = new EventSource(url);
 	}
 
 	state = {
